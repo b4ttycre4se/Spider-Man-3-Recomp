@@ -1,4 +1,6 @@
-Spider-Man 3 Xbox 360 Recomp
+- Spider-Man 3 Xbox 360 Recomp -
+
+An unofficial, early-stage recompilation project for the Xbox 360 version of \*Spider-Man 3\*, using ReXGlue.
 
 
 <p align="center">
@@ -10,18 +12,9 @@ Spider-Man 3 Xbox 360 Recomp
 </p>
 
 
-
-An unofficial, early-stage recompilation project for the Xbox 360 version of \*Spider-Man 3\*, using ReXGlue.
-
-
-
-Current status
-
-
+Current status:
 
 This is a proof of concept, not a playable release.
-
-
 
 - The game passes the initial splash screens and reaches the main-menu stage.
 
@@ -37,25 +30,15 @@ This is a proof of concept, not a playable release.
 
 
 
-Game data
-
-
+Game data:
 
 This repository does not include the game, an ISO, an XEX, or extracted game files.
 
-
-
 For local testing, place your own extracted game files in an `assets/` folder in the project directory. The `assets/` folder is excluded from this repository.
-
-
 
 Running a local development build
 
-
-
 The current Windows x64 debug build needs to be launched with ReXGlue runtime arguments. From the project directory, the command currently looks like this:
-
-
 
 ```bat
 
@@ -63,23 +46,17 @@ The current Windows x64 debug build needs to be launched with ReXGlue runtime ar
 
 ```
 
-
-
 Replace the example path with the full path to your own `assets` folder. Double-clicking the EXE by itself does not currently provide that path. This is a developer-testing command, not a simple player-facing launcher.
 
 
 
-Feedback
-
-
+Feedback:
 
 This project is at a very early stage, and behaviour may change. Reproducible bug reports and feedback are welcome. Please do not upload or attach game files, disc images, or extracted game data.
 
 
 
-Disclaimer
-
-
+Disclaimer:
 
 This is an unofficial fan project and is not affiliated with or endorsed by the game's rights holders. No game data is distributed here.
 
