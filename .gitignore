@@ -1,0 +1,12 @@
+/assets/
+*.xex
+*.iso
+*.xiso
+/generated/default/
+/out/
+*.exe
+*.dll
+*.pdb
+*.obj
+*.log
+*.lnk
