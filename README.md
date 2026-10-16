@@ -36,7 +36,9 @@ This repository does not include the game, an ISO, an XEX, or extracted game fil
 
 For local testing, place your own extracted game files in an `assets/` folder in the project directory. The `assets/` folder is excluded from this repository.
 
-Running a local development build
+
+
+Running a local development build:
 
 The current Windows x64 debug build needs to be launched with ReXGlue runtime arguments. From the project directory, the command currently looks like this:
 
