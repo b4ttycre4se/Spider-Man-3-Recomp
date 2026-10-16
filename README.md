@@ -4,9 +4,9 @@ An unofficial, early-stage recompilation project for the Xbox 360 version of *Sp
 
 <p align="center">
   <a href="https://en.wikipedia.org/wiki/Spider-Man_3_%28video_game%29">
-    <img src="https://upload.wikimedia.org/wikipedia/en/1/15/Spider-Man_3_%28video_game%29_cover.png"
-         alt="Spider-Man 3 video game cover art"
-         width="360">
+    <img src="https://m.media-amazon.com/images/I/51ZwdZAJLpL.jpg"
+     alt="Spider-Man 3 Xbox 360 cover art"
+     width="300">
   </a>
 </p>
 
