@@ -1,4 +1,13 @@
-\# Spider-Man 3 Xbox 360 Recomp
+Spider-Man 3 Xbox 360 Recomp
+
+
+<p align="center">
+  <a href="https://en.wikipedia.org/wiki/Spider-Man_3_%28video_game%29">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/15/Spider-Man_3_%28video_game%29_cover.png"
+         alt="Spider-Man 3 video game cover art"
+         width="360">
+  </a>
+</p>
 
 
 
@@ -6,7 +15,7 @@ An unofficial, early-stage recompilation project for the Xbox 360 version of \*S
 
 
 
-\## Current status
+Current status
 
 
 
@@ -14,21 +23,21 @@ This is a proof of concept, not a playable release.
 
 
 
-\- The game passes the initial splash screens and reaches the main-menu stage.
+- The game passes the initial splash screens and reaches the main-menu stage.
 
-\- The main menu itself is black, but its music plays.
+- The main menu itself is black, but its music plays.
 
-\- If left untouched, the idle video appears and plays with sound.
+- If left untouched, the idle video appears and plays with sound.
 
-\- Moving the controller returns the display to the black menu.
+- Moving the controller returns the display to the black menu.
 
-\- Performance is very poor in the current debug build.
+- Performance is very poor in the current debug build.
 
-\- There is no ready-to-run release or portable launcher.
+- There is no ready-to-run release or portable launcher.
 
 
 
-\## Game data
+Game data
 
 
 
@@ -40,7 +49,7 @@ For local testing, place your own extracted game files in an `assets/` folder in
 
 
 
-\## Running a local development build
+Running a local development build
 
 
 
@@ -60,7 +69,7 @@ Replace the example path with the full path to your own `assets` folder. Double-
 
 
 
-\## Feedback
+Feedback
 
 
 
@@ -68,7 +77,7 @@ This project is at a very early stage, and behaviour may change. Reproducible bu
 
 
 
-\## Disclaimer
+Disclaimer
 
 
 
