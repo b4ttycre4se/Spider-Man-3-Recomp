@@ -1,4 +1,4 @@
-- Spider-Man 3 Xbox 360 Recomp -
+Spider-Man 3 Xbox 360 Recomp 
 
 An unofficial, early-stage recompilation project for the Xbox 360 version of \*Spider-Man 3\*, using ReXGlue.
 
