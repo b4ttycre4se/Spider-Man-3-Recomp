@@ -1,51 +1,55 @@
+<div align="center">
+
 **Spider-Man 3 Xbox 360 Recomp**
 
-An unofficial recompilation project for the Xbox 360 version of *Spider-Man 3*, built with ReXGlue.
+An unofficial recompilation of the Xbox 360 version of *Spider-Man 3*, built with ReXGlue.
 
-<p align="center">
-  <a href="https://en.wikipedia.org/wiki/Spider-Man_3_(video_game)">
-    <img src="https://m.media-amazon.com/images/I/51ZwdZAJLpL.jpg"
-         alt="Spider-Man 3 Xbox 360 cover art"
-         width="300">
-  </a>
-</p>
+<a href="https://en.wikipedia.org/wiki/Spider-Man_3_(video_game)">
+  <img src="https://m.media-amazon.com/images/I/51ZwdZAJLpL.jpg" alt="Spider-Man 3 Xbox 360 cover art" width="260">
+</a>
 
-**First public test build**
+[![Latest test build](https://img.shields.io/github/v/release/b4ttycre4se/Spider-Man-3-Recomp?include_prereleases&label=latest%20test%20build)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases/latest)
+[![Windows x64](https://img.shields.io/badge/platform-Windows%20x64-0078D6?logo=windows&logoColor=white)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases)
+[![Open issues](https://img.shields.io/github/issues/b4ttycre4se/Spider-Man-3-Recomp?label=issues)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/b4ttycre4se/Spider-Man-3-Recomp?label=pull%20requests)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/pulls)
 
-[Download the v0.1.0 Windows test build](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases/tag/v0.1.0).
+[Download v0.2.0](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases/tag/v0.2.0) · [All releases](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases) · [Report a bug](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/issues) · [Contribute](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/pulls)
 
-This is an early work in progress, not a finished or fully compatible release. In my testing, the game reached gameplay, completed the Prologue and saved successfully. I haven’t played far enough to know how much of the rest of the game works. I’ll keep playing and testing as far as I can.
+</div>
 
-**Performance and known issues**
+---
 
-- Frame rate can drop substantially in busy city scenes and around effects. Stuttering is also present.
-- My current theory is that shader compilation or caching contributes to some stuttering. Repeated play in an area seemed to make it smoother, but I haven’t proved this is the only cause.
-- Thin lines or seams can still appear across road surfaces in some views, especially in bright light.
-- Compatibility beyond the parts tested so far is unknown. Performance may vary between PCs.
+**Project status**
 
-**What I’d like to work on next**
+v0.2.0 is an early Windows x64 pre-release, not a finished or fully compatible release. In my testing, city performance now feels stable at the existing 30 FPS cap. The brief hitches I still notice appear to be shader-compilation stutter. I have tested several city areas, saved and reloaded, and have not seen visible graphics errors. The full campaign has not been tested.
 
-- Continue testing through the game and note where missions, saving or progression fail.
-- Investigate shader stutter and whether shader warming or pre-compilation is possible.
-- Investigate the road-surface lines and other graphics issues.
-- Test whether a safe 60 FPS option is possible without breaking mission timing or gameplay. There is no 60 FPS option in this build.
-- Explore further graphics and quality-of-life settings.
+**Known issues and future work**
 
-These are goals to investigate, not promises about what will be included or when.
+- The current build remains capped at 30 FPS; it does not include a 60 FPS mode.
+- Remaining brief stutters appear related to shader compilation in my testing.
+- Road-surface lines or seams can still appear in some views, especially in bright light.
+- Mission compatibility and performance later in the campaign are not yet known.
+- Future work includes testing a safe 60 FPS option, improving road markings, and continuing stability testing. 60 FPS will need mission-timing checks before it can be considered ready.
+
+These are goals to investigate, not promises about features or dates.
 
 **Getting started**
 
-1. Download and extract the Windows x64 test build from the [Releases page](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases).
-2. Put your own extracted game files in the `assets` folder, with `default.xex` directly inside `assets`.
-3. Run `spiderman3.exe`.
+1. Download and extract the [v0.2.0 Windows pre-release](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases/tag/v0.2.0).
+2. Put your own extracted game files in the assets folder, with default.xex directly inside assets.
+3. Run spiderman3.exe.
 
-The game, ISO, XEX and extracted game files are not included. Don’t upload or send game files in bug reports.
+The game, ISO, XEX, and extracted game files are not included. Use game files you are legally entitled to use. Do not upload or send game files in bug reports.
 
-**Bug reports and contributions**
+**Experimental performance option**
 
-Bug reports are welcome. Please include where you were, what you were doing, what happened, whether you could reproduce it, and the relevant log if available. Don’t attach game files.
+The included spiderman3.toml enables an experimental D3D12 resolve-readback option intended to reduce stalls. It skips a synchronous wait on a cache miss. If you see corrupted or missing textures, lighting problems, freezes, or other unexpected behavior, set readback_resolve_fast_skip_cache_miss_wait to false in spiderman3.toml and restart.
 
-Pull requests are welcome, especially for focused fixes or improvements. I’m new to recompilation projects, so please explain what your change does and how you tested it.
+**Building and contributing**
+
+The v0.2.0 binary was built using a locally modified ReXGlue SDK checkout. That SDK change is not yet included in this game repository, so forking this repository alone will not reproduce the performance change. The project setup looks for an installed ReXGlue SDK 0.10.0 or a separately supplied SDK path; see the [SDK configuration](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/blob/main/generated/rexglue.cmake) and [ReXGlue SDK](https://github.com/rexglue/rexglue-sdk).
+
+Pull requests are welcome. Focused changes with a short explanation and test details are especially helpful. For bug reports, include the mission or location, what you were doing, steps to reproduce, and a log or screenshot if available. Reports about how far you get before a crash or mission issue are particularly useful. Do not attach game files.
 
 **Disclaimer**
 
