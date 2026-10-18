@@ -1,48 +1,57 @@
 **Spider-Man 3 Xbox 360 Recomp**
 
-(UPDATE: GAME LOADS, I FINISHED PROLOGUE, NO CRASHES, JUST FIXING SMALL ISSUES AND WILL DROP THE FIRST RELEASE BUILD SOON)
-
-An unofficial, early-stage recompilation project for the Xbox 360 version of *Spider-Man 3*, using ReXGlue.
+An unofficial recompilation project for the Xbox 360 version of *Spider-Man 3*, built with ReXGlue.
 
 <p align="center">
-  <a href="https://en.wikipedia.org/wiki/Spider-Man_3_%28video_game%29">
+  <a href="https://en.wikipedia.org/wiki/Spider-Man_3_(video_game)">
     <img src="https://m.media-amazon.com/images/I/51ZwdZAJLpL.jpg"
-     alt="Spider-Man 3 Xbox 360 cover art"
-     width="300">
+         alt="Spider-Man 3 Xbox 360 cover art"
+         width="300">
   </a>
 </p>
 
-**Current status**
+**About this build**
 
-This is a proof of concept, not a playable release.
+This is the first public test build. It is an early work in progress, not a finished or fully compatible release.
 
-- The game passes the initial splash screens and reaches the main-menu stage.
-- The main menu is black, but its music plays.
-- If left untouched, the idle video becomes visible and plays with sound.
-- Moving the controller returns the display to the black menu.
-- Performance is very poor in the current debug build.
-- There is no ready-to-run release or portable launcher.
+In my testing, the game has reached gameplay, completed the Prologue and saved successfully. I haven’t played far enough to know how much of the rest of the game works. I’ll keep playing and testing as far as I can, and I’m hoping to find out how far it gets before a crash or other major problem.
 
-**Game data**
+**Performance and known issues**
 
-This repository does not include the game, an ISO, an XEX, or extracted game files.
+- Frame rate can drop substantially in busy city scenes and around effects. Stuttering is also present.
+- My current theory is that shader compilation or caching contributes to some of the stuttering. Repeated play in an area seemed to make it smoother, but I haven’t proved this is the only cause.
+- Thin lines or seams can still show across road surfaces in some views, especially in bright light.
+- Compatibility beyond the parts tested so far is unknown. Performance may also vary between PCs.
 
-For local testing, place your own extracted game files in an `assets/` folder in the project directory. The `assets/` folder is excluded from this repository.
+**What I’d like to work on next**
 
-**Running a local development build**
+- Continue testing through the game and note where missions, saving or progression fail.
+- Investigate shader stutter and whether any useful shader-warming or pre-compilation approach is possible.
+- Investigate the road-surface lines and other graphics issues.
+- Test whether a safe 60 FPS option is possible without breaking mission timing or gameplay. There is no 60 FPS option in this build.
+- Look into further graphics and quality-of-life settings as the project matures.
 
-The current Windows x64 debug build needs to be launched with ReXGlue runtime arguments. From the project directory, the command currently looks like this:
+These are goals to investigate, not promises about what will be included or when.
 
-```bat
-.\out\build\win-amd64-debug\spiderman3.exe --gpu_plugin=xenos --game_data_root="C:\path\to\Spider-Man 3 Recomp\assets"
-```
+**Getting started**
 
-Replace the example path with the full path to your own `assets` folder. Double-clicking the EXE by itself does not currently provide that path. This is a developer-testing command, not a simple player-facing launcher.
+1. Download and extract the Windows x64 test build from the GitHub Releases page when it is published.
+2. Put your own extracted game files in the `assets` folder, with `default.xex` directly inside `assets`.
+3. Run `spiderman3.exe`.
 
-**Feedback**
+The game, ISO, XEX and extracted game files are not included. Use only game files you are entitled to use, and don’t upload or send them in bug reports.
 
-This project is at a very early stage, and behaviour may change. Reproducible bug reports and feedback are welcome. Please do not upload or attach game files, disc images, or extracted game data.
+**Bug reports and contributions**
+
+Bug reports are very welcome. Please include:
+
+- Where you were in the game and what you were doing.
+- What happened, and whether you could reproduce it.
+- Your PC’s basic hardware details, if you know them.
+- The relevant log, if available. Do not attach game files.
+
+Pull requests are welcome too, especially for focused fixes or improvements. I’m new to recompilation projects, so please explain what your change does and how you tested it.
 
 **Disclaimer**
 
-This is an unofficial fan project and is not affiliated with or endorsed by the game's rights holders. No game data is distributed here.
+This is an unofficial fan project and is not affiliated with or endorsed by the game’s rights holders. All game names and related rights belong to their respective owners.
