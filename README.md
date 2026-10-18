@@ -8,7 +8,7 @@ An unofficial recompilation of the Xbox 360 version of *Spider-Man 3*, built wit
   <img src="https://m.media-amazon.com/images/I/51ZwdZAJLpL.jpg" alt="Spider-Man 3 Xbox 360 cover art" width="260">
 </a>
 
-[![Latest test build](https://img.shields.io/github/v/release/b4ttycre4se/Spider-Man-3-Recomp?include_prereleases&label=latest%20test%20build)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases/latest)
+[![Latest test build](https://img.shields.io/github/v/tag/b4ttycre4se/Spider-Man-3-Recomp?label=latest%20test%20build)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases)
 [![Windows x64](https://img.shields.io/badge/platform-Windows%20x64-0078D6?logo=windows&logoColor=white)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases)
 [![Open issues](https://img.shields.io/github/issues/b4ttycre4se/Spider-Man-3-Recomp?label=issues)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/issues)
 [![Pull requests](https://img.shields.io/github/issues-pr/b4ttycre4se/Spider-Man-3-Recomp?label=pull%20requests)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/pulls)
