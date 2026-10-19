@@ -41,11 +41,6 @@ These are goals to investigate, not promises about features or dates.
 
 The game, ISO, XEX, and extracted game files are not included. Use game files you are legally entitled to use. Do not upload or send game files in bug reports.
 
-**Experimental performance option**
-
-The included spiderman3.toml enables an experimental D3D12 resolve-readback option intended to reduce stalls. It skips a synchronous wait on a cache miss. If you see corrupted or missing textures, lighting problems, freezes, or other unexpected behavior, set readback_resolve_fast_skip_cache_miss_wait to false in spiderman3.toml and restart.
-
-The v0.2.1 configuration also requests 16:1 anisotropic filtering where eligible textures support it. FXAA is disabled.
 
 **Building and contributing**
 
