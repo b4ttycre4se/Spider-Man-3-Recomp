@@ -1,3 +1,5 @@
+> **Project status:** I’m no longer actively working on this project. The source is available for anyone who’d like to continue development, improve it, or contribute fixes. I hope someone picks it up and takes it further. Thank you to everyone who tested the project and offered support.
+
 <div align="center">
 
 **Spider-Man 3 Xbox 360 Recomp**
