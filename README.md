@@ -26,24 +26,26 @@ An unofficial recompilation of the Xbox 360 version of *Spider-Man 3*, built wit
 
 **Spider-Man 3 Xbox 360 Recomp** is an unofficial Windows x64 recompilation of the Xbox 360 version of *Spider-Man 3*. ReXGlue recompiles the game code for PC. Version 1.0 adds a project-built Vulkan renderer in place of the previous Xenia-based Xenos GPU rendering plugin.
 
-In my view, this is currently the best way to play the Xbox 360 version on PC. The 1.0 build combines the original game assets with a targeted road-marking correction, 1440p internal rendering, FXAA, and a 60 FPS cap. It remains a recompilation with a compatibility runtime, not a source-code remake.
+In my view, this is currently the best way to play the Xbox 360 version on PC. The 1.0 build combines the original game assets with corrected road markings, 1440p internal rendering, FXAA, and a 60 FPS cap. It remains a recompilation with a compatibility runtime, not a source-code remake.
 
 ## Version 1.0 features
 
 - **Dedicated Vulkan renderer** replaces the previous Xenos GPU rendering path.
-- **Road-marking seams corrected** with a targeted adjustment to road-texture sampling and mip selection, rather than blur across the whole image.
+- **Road markings corrected:** the game’s bilinear filtering blended a pale strip at the edge of the road-lane texture into the markings. Version 1.0 overrides sampling for that texture to prevent the edge bleed, without blurring the rest of the image.
 - **1440p internal resolution** is enabled at 2× the game’s 1280×720 base resolution.
 - **FXAA** is enabled on the final image, including the HUD.
 - **60 FPS cap** is enabled by default. The cap can be changed in the TOML; no separate launcher is included.
-- **Performance work** includes more efficient texture tracking, reduced readbacks, pipeline caching and asynchronous compilation, and ReXGlue runtime fixes.
+- **Performance improvements** include more efficient texture tracking, reduced readbacks, pipeline caching and asynchronous compilation, and ReXGlue runtime fixes.
 - **Optional ray-traced reflections** are available on compatible Vulkan GPUs but are disabled by default.
 - **Island exploration** can be enabled through an experimental TOML option.
 
-The 60 FPS setting is a cap, not a guarantee of a constant 60 FPS on every PC. Performance varies with hardware, drivers, resolution, and the scene.
+## Performance
+
+On my RTX 3050 6 GB, version 1.0 runs very smoothly at the included 1440p internal resolution with a 60 FPS cap. In my experience, performance is dramatically better than running the game in Xenia or RPCS3. Results may vary by PC, graphics driver, and scene.
 
 ## Missions and compatibility
 
-Missions and cutscenes have worked well in testing so far. The full campaign has not been verified across every system. If a mission behaves incorrectly at 60 FPS, report the mission and exact point; a separate 30 FPS build may be added if needed.
+Missions and cutscenes have worked well in testing so far. The full campaign has not been verified across every system. If a mission behaves incorrectly at 60 FPS, change `sm3_fps_limit` to `30` in the included `spiderman3.toml` and report the mission and exact point where the issue occurs. A separate build is not needed.
 
 ## Island exploration
 
