@@ -3,7 +3,6 @@
 
 <div align="center">
 
-**Spider-Man 3 Xbox 360 Recomp**
 
 An unofficial recompilation of the Xbox 360 version of *Spider-Man 3*, built with ReXGlue and a dedicated Vulkan renderer.
 
