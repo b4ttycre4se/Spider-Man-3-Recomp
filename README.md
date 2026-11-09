@@ -1,18 +1,30 @@
-**Project status:** Spider-Man 3 X360 Recomp 1.0.3 is the current release. Further work may be picked up by Second Coat, but that has not been confirmed.
+> **Project status:** **Spider-Man 3 X360 Recomp 1.0.3** is the current release. Further work may be picked up by Second Coat, but that has not been confirmed.
 
-# Spider-Man 3 Xbox 360 Recomp
+<div align="center">
+
+**Spider-Man 3 Xbox 360 Recomp**
 
 An unofficial recompilation of the Xbox 360 version of *Spider-Man 3*, built with ReXGlue and a dedicated Vulkan renderer.
 
-[![Spider-Man 3 Xbox 360 cover art](https://m.media-amazon.com/images/I/51ZwdZAJLpL.jpg)](https://en.wikipedia.org/wiki/Spider-Man_3_(video_game))
+<a href="https://en.wikipedia.org/wiki/Spider-Man_3_(video_game)">
+  <img src="https://m.media-amazon.com/images/I/51ZwdZAJLpL.jpg" alt="Spider-Man 3 Xbox 360 cover art" width="260">
+</a>
 
-[![Version 1.0.3](https://img.shields.io/github/v/tag/b4ttycre4se/Spider-Man-3-Recomp?label=version)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases) [![Windows x64](https://img.shields.io/badge/platform-Windows%20x64-0078D6?logo=windows&logoColor=white)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases) [![Vulkan](https://img.shields.io/badge/renderer-Vulkan-AC162C?logo=vulkan&logoColor=white)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases) [![Open issues](https://img.shields.io/github/issues/b4ttycre4se/Spider-Man-3-Recomp?label=issues)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/issues) [![Pull requests](https://img.shields.io/github/issues-pr/b4ttycre4se/Spider-Man-3-Recomp?label=pull%20requests)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/pulls)
+[![Version 1.0.3](https://img.shields.io/badge/release-1.0.3-brightgreen)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases)
+[![Windows x64](https://img.shields.io/badge/platform-Windows%20x64-0078D6?logo=windows&logoColor=white)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases)
+[![Vulkan](https://img.shields.io/badge/renderer-Vulkan-AC162C?logo=vulkan&logoColor=white)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp)
+[![Open issues](https://img.shields.io/github/issues/b4ttycre4se/Spider-Man-3-Recomp?label=issues)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/b4ttycre4se/Spider-Man-3-Recomp?label=pull%20requests)](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/pulls)
 
-[Download version 1.0.3](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases/tag/v1.0.3) · [Report an issue](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/issues) · [Contribute](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/pulls)
+[Download version 1.0.3](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/releases) · [Report an issue](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/issues) · [Contribute](https://github.com/b4ttycre4se/Spider-Man-3-Recomp/pulls)
+
+</div>
+
+---
 
 ## About
 
-Spider-Man 3 Xbox 360 Recomp is an unofficial Windows x64 recompilation of the Xbox 360 version of *Spider-Man 3*. ReXGlue recompiles the game code for PC. The project uses a dedicated Vulkan renderer.
+**Spider-Man 3 Xbox 360 Recomp** is an unofficial Windows x64 recompilation of the Xbox 360 version of *Spider-Man 3*. ReXGlue recompiles the game code for PC. The project uses a dedicated Vulkan renderer.
 
 In my view, this is currently the best way to play the Xbox 360 version on PC. The release combines the original game assets with a road-marking correction, 1440p internal rendering, FXAA, and a 60 FPS cap.
 
@@ -41,7 +53,7 @@ Version 1.0.1 improves compatibility on systems without Resizable BAR (ReBAR) an
 - **Road markings corrected:** the game’s bilinear filtering blended a pale strip at the edge of the road-lane texture into the markings. The renderer overrides sampling for that texture to prevent the edge bleed without blurring the rest of the image.
 - **1440p internal resolution** is enabled at 2× the game’s 1280×720 base resolution.
 - **FXAA** is enabled on the final image, including the HUD.
-- **60 FPS cap** is enabled by default. Set `sm3_fps_limit` to 30 in `spiderman3.toml` to use 30 FPS.
+- **60 FPS cap** is enabled by default. Set `sm3_fps_limit` to `30` in `spiderman3.toml` to use 30 FPS.
 - **Performance improvements** include more efficient texture tracking, reduced readbacks, pipeline caching and asynchronous compilation, and ReXGlue runtime fixes.
 - **Optional ray-traced reflections** are available on compatible Vulkan GPUs but are disabled by default.
 
@@ -51,11 +63,11 @@ On my RTX 3050 6 GB, the game runs very smoothly at the included 1440p internal 
 
 ## Missions and compatibility
 
-Missions and cutscenes have worked well in testing so far, though the full campaign has not been verified on every system. If you encounter a mission or cutscene issue at 60 FPS, try setting `sm3_fps_limit` to 30 in the included TOML and report where the problem occurs.
+Missions and cutscenes have worked well in testing so far, though the full campaign has not been verified on every system. If you encounter a mission or cutscene issue at 60 FPS, try setting `sm3_fps_limit` to `30` in the included TOML and report where the problem occurs.
 
 ## Island exploration
 
-Island access is disabled by default. The cells stream in as you approach, with the distance controlled by `sm3_island_load_distance`.
+Island access is enabled by default. The cells stream in as you approach, with the distance controlled by `sm3_island_load_distance`.
 
 **Known limitation:** At the Statue of Liberty and another island, the player character can freeze. The island where you break Scorpion out is fully explorable in this build. Further island work may be included in a future Second Coat release, but that is not confirmed.
 
@@ -70,7 +82,7 @@ No game files are included. Do not share or upload game files.
 
 ## Thanks to Second Coat
 
-Thank you to the people at Second Coat for their help with version 1.0.1. They are currently working on a new PS2 engine project for *The Getaway*: Second Coat’s project.
+Thank you to the people at **Second Coat** for their help with version 1.0.1. They are currently working on a new PS2 engine project for *The Getaway*: [Second Coat’s project](https://github.com/SecondCoat/second-coat-london).
 
 Second Coat may pick up further work on this recompilation, but that has not been confirmed.
 
@@ -80,7 +92,7 @@ The ReXGlue SDK currently referenced by this repository is out of date and is no
 
 ## Reporting issues and contributing
 
-Please include your operating system, GPU and driver, mission or location, TOML settings, and steps to reproduce a problem. Logs or screenshots are useful. Pull requests and technical feedback are welcome. Do not attach game files.
+Please include your operating system, GPU and driver, mission or location, TOML settings, and steps to reproduce a problem. Logs or screenshots are useful. Pull requests and technical feedback are welcome. **Do not attach game files.**
 
 ## Disclaimer
 
