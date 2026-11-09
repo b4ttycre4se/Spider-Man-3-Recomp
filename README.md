@@ -40,7 +40,7 @@ In my view, this is currently the best way to play the Xbox 360 version on PC. T
 - **More city streaming slots:** The game can keep 13 regions loaded by default, up from 8. The `sm3_region_slots` setting controls the region count.
 - **MEGACITY_STRIP streaming:** `sm3_strip_slots` defaults to 5 additional slots for MEGACITY_STRIP packs.
 - **Expanded region tables:** Region heaps and the data-block pool were enlarged. The loaded-region bounds table now contains 48 entries.
-- **Island streaming:** `sm3_unlock_islands` is enabled by default. Island cells can stream in when you are within `sm3_island_load_distance` units of the island bounds; the default is 1400.
+- **Island streaming:** `sm3_unlock_islands` is disabled by default. Island cells can stream in when you are within `sm3_island_load_distance` units of the island bounds; the default is 1400.
 - **Greater building view distance:** `sm3_building_view_distance` defaults to 1500 units, up from the game's 800-unit view distance.
 - **Spider Sense highlights:** enemies and objects are highlighted correctly in Spider Sense mode.
 - **Performance improvements** include more efficient texture tracking, reduced readbacks, pipeline caching and asynchronous compilation, and ReXGlue runtime fixes.
