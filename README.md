@@ -1,4 +1,4 @@
-| **Project status:** Spider-Man 3 X360 Recomp 1.1.0 is the current release. Further work may be picked up by Second Coat, but that has not been confirmed. |
+| **Project status:** Spider-Man 3 X360 Recomp 1.1 is the current release. Further work may be picked up by Second Coat, but that has not been confirmed. |
 |:--|
 
 <div align="center">
