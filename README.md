@@ -1,4 +1,4 @@
-| **Project status:** Spider-Man 3 X360 Recomp 1.1 is the current release. Further work may be picked up by Second Coat, but that has not been confirmed. |
+| **Project status:** Spider-Man 3 X360 Recomp 1.1.1 is the current release. Further work may be picked up by Second Coat, but that has not been confirmed. |
 |:--|
 
 <div align="center">
@@ -32,7 +32,9 @@ In my view, this is currently the best way to play the Xbox 360 version on PC. T
 
 - **Dedicated Vulkan renderer** replaces the previous Xenia-based Xenos GPU rendering plugin.
 - **Launcher** for starting the game.
-- **Interiors on the map:** open the map and enable interiors in the filter to see the interiors in the open world. They were always scattered around the city with nothing marking them, so you had to find them yourself. Now they show up on the map.
+- **Story and characters in the launcher:** selecting Story runs the vanilla game. Selecting any of the other characters gives you free roam with no missions, apart from the New Goblin races.
+- **Missions fixed with the framerate unlocked:** missions that were broken when the framerate was unlocked have been fixed.
+- **Interiors on the map:** open the map and enable interiors in the filter to see the interiors in the open world. They were always scattered around the open world with nothing marking them, so you had to find them yourself. Now they show up on the map.
 - **Character switching:** change your character between Peter, Spider-Man, black suit Spider-Man, and New Goblin in free roam. All four are fully accessible and active in the launcher.
 - **Native MSAA** has been added and is enabled by default.
 - **Resizable BAR compatibility:** Updated shared-memory handling adds support for systems without Resizable BAR (ReBAR).
@@ -55,7 +57,7 @@ On my RTX 3050 6 GB, the game runs very smoothly at the included 1440p internal 
 
 ## Missions and compatibility
 
-Missions and cutscenes have worked well in testing so far, though the full campaign has not been verified on every system. If you encounter a mission or cutscene issue at 60 FPS, try setting `sm3_fps_limit` to `30` in the included TOML and report where the problem occurs.
+Missions and cutscenes have worked well in testing so far. Missions that were broken when the framerate was unlocked are fixed in this version, though the full campaign has not been verified on every system. If you encounter a mission or cutscene issue, report where the problem occurs. You can also set `sm3_fps_limit` to `30` in the included TOML to use 30 FPS.
 
 ## Island exploration
 
@@ -74,7 +76,7 @@ No game files are included. Do not share or upload game files.
 
 ## Thanks to Second Coat
 
-Thank you to the people at **Second Coat** for their help with this project, including this big 1.1 update, and for all the help they have given along the way. They are currently working on a new PS2 engine project for *The Getaway*: [Second Coat’s project](https://github.com/SecondCoat/second-coat-london).
+Thank you to the people at **Second Coat** for all the help they have given this project. They are currently working on a new PS2 engine project for *The Getaway*: [Second Coat’s project](https://github.com/SecondCoat/second-coat-london).
 
 Second Coat may pick up further work on this recompilation, but that has not been confirmed.
 
